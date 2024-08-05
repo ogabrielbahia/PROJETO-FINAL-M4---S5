@@ -1,6 +1,7 @@
 import express from 'express';
-import dotenev from 'dotenv';
 
+
+const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT,()=>{
