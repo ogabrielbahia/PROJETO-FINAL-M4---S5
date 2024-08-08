@@ -1,11 +1,34 @@
-export default class medico{
-    constructor(id, nome, email, telefone, especialidade, hospital){
-        this.id = id;
-        this.nome = nome;
-        this.email = email;
-        this.telefone = telefone;
-        this.especialidade = especialidade;
-        this.hospital = hospital;
+import { DataTypes } from "sequelize";
+
+export const Medico = sequilize.define('Medico', {
+    MedicoId: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    Nome: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+
+    Email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+
+    Telefone: {
+        type: DataTypes.NUMBER,
+        allowNull: false,
+    },
+
+    Especialidade: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+
+    Hospital: {
+        type: DataTypes.STRING,
+        allowNull: false,
     }
-}
+})
 
