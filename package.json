@@ -14,6 +14,7 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "projeto-final-m4---s5": "file:"
+    "projeto-final-m4---s5": "file:",
+    "sequelize": "^6.37.3"
   }
 }

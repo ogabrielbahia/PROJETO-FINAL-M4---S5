@@ -1,5 +1,13 @@
-import medico from "../models/medico.model";
+import { Medico } from "../models/medico.model";
 
-export const consultaMedicos = (req, res) => {
-    res.json(medico);
+export const getAllMedico = async(req, res) =>{
+    res.status(200).json(Medico);
+}
+
+export const deleteMedicoById = async(req, res) => {
+    let parametroId = req.params.id
+
+    let medicoDeletar = await Medico.findByPk(parametroId);
+
+    await medicoDeletar.destroy();
 }
