@@ -2,27 +2,30 @@
 
 
 const Paciente = sequelize.define("Paciente",{
-    id: {
+    PacienteID: {
         type: DataTypes.INTEGER,
 		primaryKey: true,
 		autoIncrement: true,
     },
-    nome: {
+    Nome: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    idade: {
-        type: DataTypes.INTEGER,
+    DataNascimentoe: {
+        type: DataTypes.DATE,
         allowNull: false,
     },
-    endereco: {
+    Sexo:{
+        type: DataTypes.ENUM('Masculino','Feminino','Outro'),
+        allowNull: true,
+    },
+    Telefone: {
         type: DataTypes.STRING,
-        allowNull: true
     },
-    numero_telefone: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    }
+    Endereco: {
+        type: DataTypes.TEXT,
+    },
+   
 });
 
 export { Paciente };
