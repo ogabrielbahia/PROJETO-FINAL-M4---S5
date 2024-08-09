@@ -1,5 +1,4 @@
-
-
+import { DataTypes } from "sequelize";
 
 const Paciente = sequelize.define("Paciente",{
     PacienteID: {
